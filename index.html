@@ -26,14 +26,39 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Personas</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="viviendas.html">Viviendas</a>
+            <a class="nav-link" href="viviendas.html">Trabajos</a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="viviendas.html">Viviendas Personas</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="viviendas.html">Trabajos Personas</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="viviendas.html">Departamentos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="viviendas.html">Municipios</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="viviendas.html">Vivienda</a>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="vehiculos.html">Vehiculos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="municipios.html">Municipios</a>
+            <a class="nav-link" href="viviendas.html">SOAT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="viviendas.html">Tecnomecanica</a>
           </li>
         </ul>
       </div>
@@ -117,12 +142,12 @@
 
             <div class="form-group mb-3">
               <label for="cedula" class="form-label">Cedula</label>
-              <input type="number" class="form-control" id="cedula" name="cedula">
+              <input type="number" required min="0" class="form-control" id="cedula" name="cedula">
             </div>
 
             <div class="form-group mb-3">
               <label for="primerNombre" class="form-label">Primer Nombre</label>
-              <input type="text" class="form-control" id="primerNombre" name="primerNombre">
+              <input type="text" required class="form-control" id="primerNombre" name="primerNombre">
             </div>
 
             <div class="form-group mb-3">
@@ -132,37 +157,45 @@
 
             <div class="form-group mb-3">
               <label for="primerApellido" class="form-label">Primer Apellido</label>
-              <input type="text" class="form-control" id="primerApellido" name="primerApellido">
+              <input type="text" required class="form-control" id="primerApellido" name="primerApellido">
             </div>
 
             <div class="form-group mb-3">
               <label for="segundoApellido" class="form-label">Segundo Apellido</label>
-              <input type="text" class="form-control" id="segundoApellido" name="segundoApellido">
+              <input type="text" required class="form-control" id="segundoApellido" name="segundoApellido">
             </div>
 
             <div class="form-group mb-3">
               <label for="fechaDeNacimiento" class="form-label">Fecha de Nacimiento</label>
-              <input type="date" class="form-control" id="fechaDeNacimiento" name="fechaDeNacimiento">
+              <input type="date" required class="form-control" id="fechaDeNacimiento" name="fechaDeNacimiento">
             </div>
 
             <div class="form-group mb-3">
-              <label for="sexo" class="form-label">Sexo</label>
-              <input type="text" maxlength="1" class="form-control" id="sexo" name="sexo">
+              <label for="sexo" required class="form-label">Sexo</label>
+              <select class="form-group form-select" required id="sexo" name="sexo">
+                <option value="Soltero">Femenino</option>
+                <option value="Casado">Masculino</option>
+              </select>
             </div>
 
             <div class="form-group mb-3">
               <label for="telefono" class="form-label">Telefono</label>
-              <input type="number" class="form-control" id="telefono" name="telefono">
+              <input type="number" required min="0" class="form-control" id="telefono" name="telefono">
             </div>
 
             <div class="form-group mb-3">
               <label for="direccionDeCorreo" class="form-label">Correo Electronico</label>
-              <input type="email" class="form-control" id="direccionDeCorreo" name="direccionDeCorreo">
+              <input type="email" required class="form-control" id="direccionDeCorreo" name="direccionDeCorreo">
             </div>
 
             <div class="form-group mb-3">
               <label for="estadoCivil" class="form-label">Estado Civil</label>
-              <input type="text" class="form-control" id="estadoCivil" name="estadoCivil">
+              <select class="form-group form-select" required id="estadoCivil" name="estadoCivil">
+                <option value="Soltero">Soltero</option>
+                <option value="Casado">Casado</option>
+                <option value="Divorciado">Divorciado</option>
+                <option value="Union Libre">Union Libre</option>
+              </select>
             </div>
 
             <button type="submit" class="btn btn-primary">Agregar</button>
