@@ -1,0 +1,5 @@
+[
+    {"codigo_departamento":"ANT1","id":1,"nombre_departamento":"Antioquia"},
+    {"codigo_departamento":"CUN1","id":2,"nombre_departamento":"Cundinamarca"},
+    {"codigo_departamento":"VAL1","id":3,"nombre_departamento":"Valle del Cauca"}
+]
