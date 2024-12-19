@@ -27,6 +27,10 @@ fetch(jsonUrl)
                 <td>${item.telefono}</td>
                 <td>${item.correo}</td>
                 <td>${item.estado_civil}</td>
+
+                <button type="button" class="btn btn-warning" id="editar">Editar</button>
+                <button type="button" class="btn btn-danger" id="borrar">Eliminar</button>
+
             `;
             tablaCuerpo.appendChild(fila);
         });
