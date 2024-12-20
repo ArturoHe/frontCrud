@@ -29,8 +29,8 @@ fetch(jsonUrl)
                 <td>${item.correo}</td>
                 <td>${item.estado_civil}</td>
 
-                <button onclick="editarRegistro(registro${item.id},${item.id})" type="button" class="btn btn-warning" id="editar${item.id}" data-bs-toggle="modal" data-bs-target="#modalEditarRegistro">Editar</button>
-                <button onclick="borrarRegistro(${item.id})" type="button" class="btn btn-danger" id="borrar${item.id}">Eliminar</button>
+                <button onclick="editarPersona(registro${item.id},${item.id})" type="button" class="btn btn-warning" id="editar${item.id}" data-bs-toggle="modal" data-bs-target="#modalEditarPersona">Editar</button>
+                <button onclick="enviarIdBorrar(${item.id})" type="button" class="btn btn-danger" id="borrar${item.id}">Eliminar</button>
 
             `;
             tablaCuerpo.appendChild(fila);
@@ -40,7 +40,7 @@ fetch(jsonUrl)
 
 // Función para borrar un registro
 
-function borrarRegistro(item) {
+function enviarIdBorrar(item) {
     fetch('http://localhost:3000/submit', {
         mode: 'cors',
         method: 'POST',
@@ -62,7 +62,7 @@ function borrarRegistro(item) {
 
 
 // Función para editar un registro
-function editarRegistro(registro, id) {
+function editarPersona(registro, id) {
 
     cedula = registro.children[1].innerHTML;
     p_Nombre = registro.children[2].innerHTML;

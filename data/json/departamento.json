@@ -1,0 +1,27 @@
+[
+    {
+      "codigo_departamento": "CUN",
+      "id": 1,
+      "nombre_departamento": "Cundinamarca"
+    },
+    {
+      "codigo_departamento": "ANT",
+      "id": 2,
+      "nombre_departamento": "Antioquia"
+    },
+    {
+      "codigo_departamento": "VAL",
+      "id": 3,
+      "nombre_departamento": "Valle del Cauca"
+    },
+    {
+      "codigo_departamento": "123123",
+      "id": 4,
+      "nombre_departamento": "Cundinamarca1"
+    },
+    {
+      "codigo_departamento": "38832",
+      "id": 5,
+      "nombre_departamento": "Meta"
+    }
+  ]

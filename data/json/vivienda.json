@@ -1,0 +1,42 @@
+[
+    {
+      "barrio": "Chapinero",
+      "descripcion": "Apartamento moderno con vista a la ciudad",
+      "direccion": "Carrera 13 #45-67",
+      "estrato": 4,
+      "id": 1,
+      "id_municipio": 1,
+      "pisos": 2,
+      "tipo_vivienda": "Apartamento"
+    },
+    {
+      "barrio": "El Poblado",
+      "descripcion": "Casa amplia con jardín",
+      "direccion": "Calle 10 #23-45",
+      "estrato": 6,
+      "id": 2,
+      "id_municipio": 2,
+      "pisos": 3,
+      "tipo_vivienda": "Casa"
+    },
+    {
+      "barrio": "San Fernando",
+      "descripcion": "Apartamento pequeño y acogedor",
+      "direccion": "Avenida 5 #20-30",
+      "estrato": 3,
+      "id": 3,
+      "id_municipio": 3,
+      "pisos": 1,
+      "tipo_vivienda": "Apartamento"
+    },
+    {
+      "barrio": "La esmeralda",
+      "descripcion": "casa bonita y alta",
+      "direccion": "carrera 3",
+      "estrato": 3,
+      "id": 4,
+      "id_municipio": null,
+      "pisos": 4,
+      "tipo_vivienda": "Urbana"
+    }
+  ]

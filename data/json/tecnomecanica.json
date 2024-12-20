@@ -1,0 +1,38 @@
+[
+  {
+    "centro_revision": "Centro A",
+    "fecha_revision": "Wed, 01 Feb 2023 00:00:00 GMT",
+    "fecha_vencimiento": "Thu, 01 Feb 2024 00:00:00 GMT",
+    "id": 1,
+    "id_vehiculo": 1,
+    "resultado": "Aprobado",
+    "valor": "150000.00"
+  },
+  {
+    "centro_revision": "Centro B",
+    "fecha_revision": "Sat, 01 Jul 2023 00:00:00 GMT",
+    "fecha_vencimiento": "Mon, 01 Jul 2024 00:00:00 GMT",
+    "id": 2,
+    "id_vehiculo": 2,
+    "resultado": "Aprobado",
+    "valor": "130000.00"
+  },
+  {
+    "centro_revision": "Centro C",
+    "fecha_revision": "Sun, 01 Oct 2023 00:00:00 GMT",
+    "fecha_vencimiento": "Tue, 01 Oct 2024 00:00:00 GMT",
+    "id": 3,
+    "id_vehiculo": 3,
+    "resultado": "Aprobado",
+    "valor": "160000.00"
+  },
+  {
+    "centro_revision": "Centro cali",
+    "fecha_revision": "Sat, 07 Dec 2024 00:00:00 GMT",
+    "fecha_vencimiento": "Fri, 27 Dec 2024 00:00:00 GMT",
+    "id": 4,
+    "id_vehiculo": null,
+    "resultado": "Valida",
+    "valor": "23123123.00"
+  }
+]

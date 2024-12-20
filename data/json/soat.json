@@ -1,0 +1,34 @@
+[
+    {
+      "aseguradora": "Seguros A",
+      "fecha_emision": "Sun, 01 Jan 2023 00:00:00 GMT",
+      "fecha_vencimiento": "Mon, 01 Jan 2024 00:00:00 GMT",
+      "id": 1,
+      "id_vehiculo": 1,
+      "valor": "500000.00"
+    },
+    {
+      "aseguradora": "Seguros B",
+      "fecha_emision": "Thu, 15 Jun 2023 00:00:00 GMT",
+      "fecha_vencimiento": "Sat, 15 Jun 2024 00:00:00 GMT",
+      "id": 2,
+      "id_vehiculo": 2,
+      "valor": "450000.00"
+    },
+    {
+      "aseguradora": "Seguros C",
+      "fecha_emision": "Sun, 10 Sep 2023 00:00:00 GMT",
+      "fecha_vencimiento": "Tue, 10 Sep 2024 00:00:00 GMT",
+      "id": 3,
+      "id_vehiculo": 3,
+      "valor": "550000.00"
+    },
+    {
+      "aseguradora": "Seguros bolivar",
+      "fecha_emision": "Fri, 06 Dec 2024 00:00:00 GMT",
+      "fecha_vencimiento": "Thu, 02 Jan 2025 00:00:00 GMT",
+      "id": 4,
+      "id_vehiculo": null,
+      "valor": "10000.00"
+    }
+  ]

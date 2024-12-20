@@ -16,9 +16,9 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-<!-- De aca pa'rriba no tocar -->
+  <!-- De aca pa'rriba no tocar -->
 
-<!-- De aca pa'bajo barra superior de navegacion-->
+  <!-- De aca pa'bajo barra superior de navegacion-->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -77,7 +77,8 @@
 
     <!-- Boton para agregar nuevo registro -->
     <div class="col">
-      <button type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#modalNuevaPersona">Agregar
+      <button type="button" class="btn btn-success m-1" data-bs-toggle="modal"
+        data-bs-target="#modalNuevoRegistro">Agregar
         nuevo registro</button>
     </div>
 
@@ -87,43 +88,18 @@
     <!--Tabla Datos (Supongo que en esto se trabajará para mostrar) -->
     <div class="table-responsive">
 
-      <table class="table table-bordered" id="tablaPersonas">
+      <table class="table table-bordered" id="tablaDatos">
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Cedula</th>
-            <th scope="col">Primer Nombre</th>
-            <th scope="col">Segundo Nombre</th>
-            <th scope="col">Primer Apellido</th>
-            <th scope="col">Segundo Apellido</th>
-            <th scope="col">Fecha Nacimiento</th>
-            <th scope="col">Sexo</th>
-            <th scope="col">Telefono</th>
-            <th scope="col">Correo</th>
-            <th scope="col">Estado Civil</th>
-            <th scope="col">Accion</th>
+            <th scope="col">ID Persona</th>
+            <th scope="col">ID Vivienda</th>
+            <th scope="col">Propietario</th>
+            <th scope="col">Acciones</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-
-            <td>TEST</td>
-            <td>TEST</td>
-            <td>11111</td>
-            <td>1111-11-11</td>
-            <td>test@test.com</td>
-            <td>11111Test</td>
-            <td>11111Test</td>
-            <td>fknsaklndklas</td>
-            <td>0</td>
-            <td>dsanid</td>
-            <td>11111Test</td>
-            <td>
-              <button type="button" class="btn btn-warning">Editar</button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-
+          <!-- Los datos del JSON serán insertados aquí -->
         </tbody>
       </table>
 
@@ -143,76 +119,35 @@
 
   <!-- Modal  (El cuadro con el form para agregar nuevo)-->
 
-  <div class="modal fade" id="modalNuevaPersona" tabindex="-1" aria-labelledby="modalNuevaPersonaLabel" aria-hidden="true">
+  <div class="modal fade" id="modalNuevoRegistro" tabindex="-1" aria-labelledby="modalNuevoRegistroLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="modalNuevaPersonaLabel">Nueva Persona</h1>
+          <h1 class="modal-title fs-5" id="modalNuevoRegistroLabel">Nueva Persona</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
 
 
 
-          <form id="formPersonaNueva" method="post" action="http://localhost:3000/submit">
+          <form id="nuevaViviendaPersona" method="post" action="http://localhost:3000/submit">
 
             <div class="form-group mb-3">
-              <label for="cedula" class="form-label">Cedula</label>
-              <input type="number" required min="0" class="form-control" id="cedula" name="cedula">
+              <label for="idPersona" class="form-label">ID Persona</label>
+              <input type="number" required min="0" class="form-control" id="idPersona" name="idPersona">
             </div>
 
             <div class="form-group mb-3">
-              <label for="primerNombre" class="form-label">Primer Nombre</label>
-              <input type="text" required class="form-control" id="primerNombre" name="primerNombre">
+              <label for="idVivienda" class="form-label">ID Vivienda</label>
+              <input type="number" required min="0" class="form-control" id="idVivienda" name="idVivienda">
             </div>
 
             <div class="form-group mb-3">
-              <label for="segundoNombre" class="form-label">Segundo Nombre</label>
-              <input type="text" class="form-control" id="segundoNombre" name="segundoNombre">
+              <label for="propietario" class="form-label">Propietario</label>
+              <input type="text" required class="form-control" id="propietario" name="propietario">
             </div>
 
-            <div class="form-group mb-3">
-              <label for="primerApellido" class="form-label">Primer Apellido</label>
-              <input type="text" required class="form-control" id="primerApellido" name="primerApellido">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="segundoApellido" class="form-label">Segundo Apellido</label>
-              <input type="text" required class="form-control" id="segundoApellido" name="segundoApellido">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="fechaDeNacimiento" class="form-label">Fecha de Nacimiento</label>
-              <input type="date" required class="form-control" id="fechaDeNacimiento" name="fechaDeNacimiento">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="sexo" required class="form-label">Sexo</label>
-              <select class="form-group form-select" required id="sexo" name="sexo">
-                <option value="Soltero">Femenino</option>
-                <option value="Casado">Masculino</option>
-              </select>
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="telefono" class="form-label">Telefono</label>
-              <input type="number" required min="0" class="form-control" id="telefono" name="telefono">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="direccionDeCorreo" class="form-label">Correo Electronico</label>
-              <input type="email" required class="form-control" id="direccionDeCorreo" name="direccionDeCorreo">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="estadoCivil" class="form-label">Estado Civil</label>
-              <select class="form-group form-select" required id="estadoCivil" name="estadoCivil">
-                <option value="Soltero">Soltero</option>
-                <option value="Casado">Casado</option>
-                <option value="Divorciado">Divorciado</option>
-                <option value="Union Libre">Union Libre</option>
-              </select>
-            </div>
 
             <button type="submit" class="btn btn-primary">Agregar</button>
           </form>
@@ -223,6 +158,52 @@
     </div>
   </div>
 
+
+  <!-- Modal Editar-->
+
+  <div class="modal fade" id="modalNuevaViviendaPersonaEditar" tabindex="-1"
+    aria-labelledby="modalNuevaViviendaPersonaEditarLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalNuevaViviendaPersonaEditarLabel">Editar Vivienda - Persona</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+
+          <form id="nuevaViviendaPersona" method="post" action="http://localhost:3000/submit">
+
+
+            <div class="form-group mb-3">
+              <label for="id" class="form-label">ID</label>
+              <input type="number" required min="0" class="form-control" id="id" name="id">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="idPersona" class="form-label">ID Persona</label>
+              <input type="number" required min="0" class="form-control" id="idPersona" name="idPersona">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="idVivienda" class="form-label">ID Vivienda</label>
+              <input type="number" required min="0" class="form-control" id="idVivienda" name="idVivienda">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="propietario" class="form-label">Propietario</label>
+              <input type="text" required class="form-control" id="propietario" name="propietario">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 

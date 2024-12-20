@@ -1,0 +1,50 @@
+[
+  {
+    "anio_fabricacion": 2020,
+    "color": "Rojo",
+    "expedido": 1,
+    "id": 1,
+    "id_dueno": 1,
+    "marca": "Toyota",
+    "nombre": "Carro A",
+    "numero_serie": "SERIE12345A",
+    "placa": "ABC123",
+    "tipo": "Sedán"
+  },
+  {
+    "anio_fabricacion": 2018,
+    "color": "Negro",
+    "expedido": 2,
+    "id": 2,
+    "id_dueno": 2,
+    "marca": "Honda",
+    "nombre": "Carro B",
+    "numero_serie": "SERIE67890B",
+    "placa": "DEF456",
+    "tipo": "SUV"
+  },
+  {
+    "anio_fabricacion": 2021,
+    "color": "Blanco",
+    "expedido": 3,
+    "id": 3,
+    "id_dueno": 3,
+    "marca": "Ford",
+    "nombre": "Carro C",
+    "numero_serie": "SERIE11223C",
+    "placa": "GHI789",
+    "tipo": "Camioneta"
+  },
+  {
+    "anio_fabricacion": 2000,
+    "color": "negro",
+    "expedido": null,
+    "id": 4,
+    "id_dueno": null,
+    "marca": "Delorean sports",
+    "nombre": "delorean",
+    "numero_serie": "12312312312",
+    "placa": "GHC 405",
+    "tipo": "Carbon"
+  }
+]

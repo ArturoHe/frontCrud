@@ -1,0 +1,30 @@
+[
+    {
+      "area": "1587.00",
+      "codigo_municipio": "BOG",
+      "id": 1,
+      "id_departamento": 1,
+      "nombre_municipio": "Bogotá"
+    },
+    {
+      "area": "382.00",
+      "codigo_municipio": "MED",
+      "id": 2,
+      "id_departamento": 2,
+      "nombre_municipio": "Medellín"
+    },
+    {
+      "area": "564.00",
+      "codigo_municipio": "CAL",
+      "id": 3,
+      "id_departamento": 3,
+      "nombre_municipio": "Cali"
+    },
+    {
+      "area": "100000.00",
+      "codigo_municipio": "12312312",
+      "id": 4,
+      "id_departamento": null,
+      "nombre_municipio": "La esmeralda"
+    }
+  ]

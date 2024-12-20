@@ -16,9 +16,9 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-<!-- De aca pa'rriba no tocar -->
+  <!-- De aca pa'rriba no tocar -->
 
-<!-- De aca pa'bajo barra superior de navegacion-->
+  <!-- De aca pa'bajo barra superior de navegacion-->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -77,7 +77,8 @@
 
     <!-- Boton para agregar nuevo registro -->
     <div class="col">
-      <button type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#modalNuevaPersona">Agregar
+      <button type="button" class="btn btn-success m-1" data-bs-toggle="modal"
+        data-bs-target="#modalNuevoRegistro">Agregar
         nuevo registro</button>
     </div>
 
@@ -87,18 +88,18 @@
     <!--Tabla Datos (Supongo que en esto se trabajará para mostrar) -->
     <div class="table-responsive">
 
-      <table class="table table-bordered" id="tablaPersonas">
+      <table class="table table-bordered" id="tablaDatos">
 
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Nombre_Departamento</th>
-            <th scope="col">Codigo_Departamento</th>
+            <th scope="col">Nombre Departamento</th>
+            <th scope="col">Codigo Departamento</th>
+            <th scope="col">Acciones</th>
           </tr>
         </thead>
-
-        <tbody id="tablaDepartamentos">
-
+        <tbody>
+          <!-- Los datos del JSON serán insertados aquí -->
         </tbody>
       </table>
 
@@ -118,18 +119,19 @@
 
   <!-- Modal  (El cuadro con el form para agregar nuevo)-->
 
-  <div class="modal fade" id="modalNuevaPersona" tabindex="-1" aria-labelledby="modalNuevaPersonaLabel" aria-hidden="true">
+  <div class="modal fade" id="modalNuevoRegistro" tabindex="-1" aria-labelledby="modalNuevoRegistroLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="modalNuevaPersonaLabel">Nuevo Departamento</h1>
+          <h1 class="modal-title fs-5" id="modalNuevoRegistroLabel">Nueva Persona</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
 
 
 
-          <form id="formPersonaNueva" method="post" action="http://localhost:3000/submit">
+          <form id="nuevoDepartamento" method="post" action="http://localhost:3000/submit">
 
             <div class="form-group mb-3">
               <label for="nombreDepartamento" class="form-label">Nombre Departamento</label>
