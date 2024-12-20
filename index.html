@@ -178,7 +178,7 @@
 
             <div class="form-group mb-3">
               <label for="telefono" class="form-label">Telefono</label>
-              <input type="number" required min="0" class="form-control" id="telefono" name="telefono">
+              <input type="tel" required min="0" class="form-control" id="telefono" name="telefono">
             </div>
 
             <div class="form-group mb-3">
@@ -205,6 +205,95 @@
     </div>
   </div>
 
+
+  <!-- Modal Editar-->
+
+  <div class="modal fade" id="modalEditarPersona" tabindex="-1" aria-labelledby="modalEditarPersonaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalEditarPersonaLabel">Editar Persona</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+
+
+          <form id="formPersonaEditar" method="post" action="http://localhost:3000/submit">
+
+            <div class="form-group mb-3">
+              <label for="idMod" class="form-label">ID</label>
+              <input type="number" required readonly class="form-control" id="idMod" name="id">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="cedula" class="form-label">Cedula</label>
+              <input type="number" required min="0" class="form-control" id="cedulaMod" name="cedula">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="primerNombre" class="form-label">Primer Nombre</label>
+              <input type="text" required class="form-control" id="primerNombreMod" name="primerNombre">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="segundoNombre" class="form-label">Segundo Nombre</label>
+              <input type="text" class="form-control" id="segundoNombreMod" name="segundoNombre">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="primerApellido" class="form-label">Primer Apellido</label>
+              <input type="text" required class="form-control" id="primerApellidoMod" name="primerApellido">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="segundoApellido" class="form-label">Segundo Apellido</label>
+              <input type="text" required class="form-control" id="segundoApellidoMod" name="segundoApellido">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="fechaDeNacimiento" class="form-label">Fecha de Nacimiento</label>
+              <input type="date" required class="form-control" id="fechaDeNacimientoMod" name="fechaDeNacimiento">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="sexo" required class="form-label">Sexo</label>
+              <select class="form-group form-select" required id="sexoMod" name="sexo">
+                <option value="Femenino">Femenino</option>
+                <option value="Masculino">Masculino</option>
+              </select>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="telefono" class="form-label">Telefono</label>
+              <input type="number" required min="0" class="form-control" id="telefonoMod" name="telefono">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="direccionDeCorreo" class="form-label">Correo Electronico</label>
+              <input type="email" required class="form-control" id="direccionDeCorreoMod" name="direccionDeCorreo">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="estadoCivil" class="form-label">Estado Civil</label>
+              <select class="form-group form-select" required id="estadoCivilMod" name="estadoCivil">
+                <option value="Soltero">Soltero</option>
+                <option value="Casado">Casado</option>
+                <option value="Divorciado">Divorciado</option>
+                <option value="Viudo">Viudo</option>
+                <option value="Union Libre">Union Libre</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Aplicar Cambios</button>
+            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancelar</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 

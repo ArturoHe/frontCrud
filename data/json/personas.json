@@ -15,7 +15,7 @@
     {
         "cedula": "987654321098",
         "correo": "maria.lopez@email.com",
-        "estado_civil": "Casada",
+        "estado_civil": "Casado",
         "fecha_nacimiento": "Thu, 25 Jul 1985 00:00:00 GMT",
         "id": 2,
         "p_Apellido": "Lopez",
