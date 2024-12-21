@@ -1,41 +1,7 @@
 [
     {
-        "cedula": "102345678901",
-        "correo": "juan.perez@email.com",
-        "estado_civil": "Soltero",
-        "fecha_nacimiento": "Sat, 12 May 1990 00:00:00 GMT",
-        "id": 1,
-        "p_Apellido": "P\u00e9rez",
-        "p_Nombre": "Juan",
-        "s_Apellido": "Gonz\u00e1lez",
-        "s_Nombre": "Carlos",
-        "sexo": "Masculino",
-        "telefono": "3001234567"
-    },
-    {
-        "cedula": "987654321098",
-        "correo": "maria.lopez@email.com",
-        "estado_civil": "Casado",
-        "fecha_nacimiento": "Thu, 25 Jul 1985 00:00:00 GMT",
-        "id": 2,
-        "p_Apellido": "Lopez",
-        "p_Nombre": "Mar\u00eda",
-        "s_Apellido": "Mart\u00ednez",
-        "s_Nombre": "Fernanda",
-        "sexo": "Femenino",
-        "telefono": "3202345678"
-    },
-    {
-        "cedula": "112233445566",
-        "correo": "carlos.rodriguez@email.com",
-        "estado_civil": "Divorciado",
-        "fecha_nacimiento": "Mon, 15 Mar 1993 00:00:00 GMT",
-        "id": 3,
-        "p_Apellido": "Rodr\u00edguez",
-        "p_Nombre": "Carlos",
-        "s_Apellido": "G\u00f3mez",
-        "s_Nombre": "Eduardo",
-        "sexo": "Masculino",
-        "telefono": "3103456789"
+        "id": "102345678901",
+        "id_persona": "8456",
+        "id_trabajo": "846"
     }
 ]

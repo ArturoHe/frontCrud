@@ -133,11 +133,11 @@
         <div class="modal-body">
 
 
-          <form id="nuevaTecnomecanica" method="post" action="http://localhost:3000/submit">
+          <form id="nuevaTecnomecanica" method="post" action="/api/tecnomecanica">
 
             <div class="form-group mb-3">
-              <label for="fechaEmisionSoat" class="form-label">ID Vehiculo</label>
-              <input type="number" required min="0" class="form-control" id="fechaEmisionSoat" name="fechaEmisionSoat">
+              <label for="idVehiculo" class="form-label">ID Vehiculo</label>
+              <input type="number" required min="0" class="form-control" id="idVehiculo" name="idVehiculo">
             </div>
 
             <div class="form-group mb-3">
@@ -176,7 +176,67 @@
     </div>
   </div>
 
+  <!-- Modal Editar-->
 
+  <div class="modal fade" id="modalEditarRegistro" tabindex="-1" aria-labelledby="modalNuevoRegistroLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalNuevoRegistroLabel">Nueva Persona</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form id="nuevaTecnomecanica" method="post" action="/api/tecnomecanica">
+
+            <div class="form-group mb-3">
+              <label for="idMod" class="form-label">ID</label>
+              <input type="number" required min="0" readonly class="form-control" id="idMod" name="id" style="background-color: gray;">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="idVehiculo" class="form-label">ID Vehiculo</label>
+              <input type="number" required min="0" class="form-control" id="idVehiculoMod" name="id_vehiculo">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="fechaEmisionTecno" class="form-label">Fecha Revision</label>
+              <input type="date" required class="form-control" id="fechaEmisionTecnoMod" name="fecha_revision">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="fechaVencimientoTecno" class="form-label">Fecha Vencimiento</label>
+              <input type="date" required class="form-control" id="fechaVencimientoTecnoMod" name="fecha_vencimiento">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="resultadoTecno" class="form-label">Resultado</label>
+              <input type="text" required class="form-control" id="resultadoTecnoMod" name="resultado">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="valorTecno" class="form-label">Valor</label>
+              <input type="number" required min="0" class="form-control" id="valorTecnoMod" name="valor">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="cdaTecno" class="form-label">CDA Tecnomecanica</label>
+              <input type="text" required class="form-control" id="cdaTecnoMod" name="centro_revision">
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./static/data/scripts/scriptTecnomecanica.js"></script>
 
 
 </body>

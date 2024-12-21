@@ -137,7 +137,17 @@
 
 
 
-          <form id="nuevoVehiculo" method="post" action="http://localhost:3000/submit">
+          <form id="nuevoVehiculo" method="post" action="/api/vehiculo">
+
+            <div class="form-group mb-3">
+              <label for="idDueno" class="form-label">ID Dueño</label>
+              <input type="text" required class="form-control" id="idDueno" name="idDueno">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="expedido" class="form-label">Expedido</label>
+              <input type="text" required class="form-control" id="expedido" name="expedido">
+            </div>
 
             <div class="form-group mb-3">
               <label for="nombreVehiculo" class="form-label">Nombre de vehiculo</label>
@@ -185,8 +195,83 @@
     </div>
   </div>
 
+  <!-- Modal Editar-->
+
+  <div class="modal fade" id="modalEditarRegistro" tabindex="-1" aria-labelledby="modalNuevoRegistroLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalNuevoRegistroLabel">Nueva Persona</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form id="nuevoVehiculo" method="post" action="/api/vehiculo">
+
+            <div class="form-group mb-3">
+              <label for="idMod" class="form-label">ID</label>
+              <input type="number" required min="0" readonly class="form-control" id="idMod" name="id" style="background-color: gray;">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="idDueno" class="form-label">ID Dueño</label>
+              <input type="text" required class="form-control" id="idDuenoMod" name="id_dueno">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="expedido" class="form-label">Expedido</label>
+              <input type="text" required class="form-control" id="expedidoMod" name="expedido">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="nombreVehiculo" class="form-label">Nombre de vehiculo</label>
+              <input type="text" required class="form-control" id="nombreVehiculoMod" name="nombre">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="marcaVehiculo" class="form-label">Marca vehiculo</label>
+              <input type="text" required class="form-control" id="marcaVehiculoMod" name="marca">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="tipoVehiculo" class="form-label">Tipo vehiculo</label>
+              <input type="text" required class="form-control" id="tipoVehiculoMod" name="tipo">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="colorVehiculo" class="form-label">Color vehiculo</label>
+              <input type="text" required class="form-control" id="colorVehiculoMod" name="color">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="placaVehiculo" class="form-label">Placa vehiculo</label>
+              <input type="text" required class="form-control" id="placaVehiculoMod" name="placa">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="anioVehiculo" class="form-label">Año vehiculo</label>
+              <input type="number" required min="0" class="form-control" id="anioVehiculoMod" name="anio_fabricacion">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="noSerievehiculo" class="form-label">No. Serie vehiculo</label>
+              <input type="text" required class="form-control" id="noSerievehiculoMod" name="numero_serie">
+            </div>
 
 
+
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./static/data/scripts/scriptVehiculo.js"></script>
 
 </body>
 

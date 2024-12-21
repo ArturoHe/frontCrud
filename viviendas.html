@@ -92,6 +92,7 @@
         <thead>
           <tr>
             <th scope="col">ID</th>
+            <th scope="col">ID Municipio</th>
             <th scope="col">Barrio</th>
             <th scope="col">Direccion</th>
             <th scope="col">Estrato</th>
@@ -127,14 +128,19 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="modalNuevoRegistroLabel">Nueva Persona</h1>
+          <h1 class="modal-title fs-5" id="modalNuevoRegistroLabel">Nueva Vivienda</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
 
 
 
-          <form id="nuevaVivienda" method="post" action="http://localhost:3000/submit">
+          <form id="nuevaVivienda" method="post" action="/api/vivienda">
+
+            <div class="form-group mb-3">
+              <label for="idMunicipio" class="form-label">ID Municipio</label>
+              <input type="number" required min="0" class="form-control" id="idMunicipio" name="idMunicipio">
+            </div>
 
             <div class="form-group mb-3">
               <label for="barrio" class="form-label">Barrio</label>
@@ -176,7 +182,78 @@
     </div>
   </div>
 
-  <script src="./data/scripts/scriptVivienda.js"></script>
+
+  <!-- Modal Editar-->
+
+  <div class="modal fade" id="modalEditarRegistro" tabindex="-1" aria-labelledby="modalNuevoRegistroLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalNuevoRegistroLabel">Editar Vivienda</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+
+
+          <form id="nuevaVivienda" method="post" action="/api/vivienda">
+
+            <div class="form-group mb-3">
+              <label for="id" class="form-label">ID</label>
+              <input type="number" required min="0" readonly class="form-control" id="idMod" name="id" style="background-color: gray;">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="idMunicipio" class="form-label">ID Municipio</label>
+              <input type="number" required min="0" class="form-control" id="idMunicipioMod" name="id_municipio">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="barrio" class="form-label">Barrio</label>
+              <input type="text" required class="form-control" id="barrioMod" name="barrio">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="direccion" class="form-label">Direccion</label>
+              <input type="text" required class="form-control" id="direccionMod" name="direccion">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="estrato" class="form-label">Estrato</label>
+              <input type="number" required class="form-control" id="estratoMod" name="estrato">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="numeroDePisos" class="form-label">Numero De Pisos</label>
+              <input type="number" required class="form-control" id="numeroDePisosMod" name="pisos">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="tipoDeVivienda" class="form-label">Tipo De Vivienda</label>
+              <input type="text" required class="form-control" id="tipoDeViviendaMod" name="tipo_vivienda">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="descripcion" class="form-label">Descripcion</label>
+              <input type="text" required class="form-control" id="descripcionMod" name="descripcion">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  
+
+  <script src="./static/data/scripts/scriptVivienda.js"></script>
 
 
 </body>

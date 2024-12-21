@@ -133,7 +133,12 @@
 
 
 
-          <form id="nuevoTrabajo" method="post" action="http://localhost:3000/submit">
+          <form id="nuevoTrabajo" method="post" action="/api/trabajo">
+
+            <div class="form-group mb-3">
+              <label for="idMunicipioTrabajo" class="form-label">ID Municipio Trabajo</label>
+              <input type="number" required min="0" class="form-control" id="idMunicipioTrabajo" name="idMunicipioTrabajo">
+            </div>
 
             <div class="form-group mb-3">
               <label for="nombreTrabajo" class="form-label">Nombre Trabajo</label>
@@ -152,7 +157,62 @@
 
             <div class="form-group mb-3">
               <label for="tipoDeContrato" class="form-label">Tipo De Contrato</label>
-              <input type="number" required min="0" class="form-control" id="tipoDeContrato" name="tipoDeContrato">
+              <input type="text" required class="form-control" id="tipoDeContrato" name="tipoDeContrato">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Editar-->
+
+  <div class="modal fade" id="modalEditarRegistro" tabindex="-1" aria-labelledby="modalNuevoRegistroLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalNuevoRegistroLabel">Nueva Persona</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+
+
+          <form id="nuevoTrabajo" method="post" action="/api/trabajo">
+
+            <div class="form-group mb-3">
+              <label for="idMod" class="form-label">ID</label>
+              <input type="number" required min="0" readonly class="form-control" id="idMod" name="id" style="background-color: gray;">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="idMunicipioTrabajo" class="form-label">ID Municipio Trabajo</label>
+              <input type="number" required min="0" class="form-control" id="idMunicipioTrabajoMod" name="id_municipio_trabajo">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="nombreTrabajo" class="form-label">Nombre Trabajo</label>
+              <input type="text" required class="form-control" id="nombreTrabajoMod" name="nombre_trabajo">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="oficio" class="form-label">Oficio</label>
+              <input type="text" required class="form-control" id="oficioMod" name="oficio">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="salario" class="form-label">Salario</label>
+              <input type="number" required min="0" class="form-control" id="salarioMod" name="salario">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="tipoDeContrato" class="form-label">Tipo De Contrato</label>
+              <input type="text" required class="form-control" id="tipoDeContratoMod" name="tipo_contrato">
             </div>
 
             <button type="submit" class="btn btn-primary">Agregar</button>
@@ -165,7 +225,7 @@
   </div>
 
 
-
+  <script src="./static/data/scripts/scriptTrabajos.js"></script>
 
 </body>
 

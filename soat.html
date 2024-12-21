@@ -133,11 +133,11 @@
 
 
 
-          <form id="nuevoSoat" method="post" action="http://localhost:3000/submit">
+          <form id="nuevoSoat" method="post" action="/api/soat">
 
             <div class="form-group mb-3">
-              <label for="fechaEmisionSoat" class="form-label">ID Vehiculo</label>
-              <input type="number" required min="0" class="form-control" id="fechaEmisionSoat" name="fechaEmisionSoat">
+              <label for="idVehiculo" class="form-label">ID Vehiculo</label>
+              <input type="number" required min="0" class="form-control" id="idVehiculo" name="idVehiculo">
             </div>
 
             <div class="form-group mb-3">
@@ -173,8 +173,65 @@
     </div>
   </div>
 
+  <!-- Modal Editar-->
+
+  <div class="modal fade" id="modalEditarRegistro" tabindex="-1" aria-labelledby="modalNuevoRegistroLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalNuevoRegistroLabel">Nueva Persona</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form id="nuevoSoat" method="post" action="/api/soat">
+
+            <div class="form-group mb-3">
+              <label for="idMod" class="form-label">ID</label>
+              <input type="number" required min="0" readonly class="form-control" id="idMod" name="id" style="background-color: gray;">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="idVehiculo" class="form-label">ID Vehiculo</label>
+              <input type="number" required min="0" class="form-control" id="idVehiculoMod" name="id_vehiculo">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="fechaEmisionSoat" class="form-label">Fecha Emision</label>
+              <input type="date" required class="form-control" id="fechaEmisionSoatMod" name="fecha_emision">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="fechaVencimientoSoat" class="form-label">Fecha Vencimiento</label>
+              <input type="date" required class="form-control" id="fechaVencimientoSoatMod" name="fecha_vencimiento">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="aseguradoraSoat" class="form-label">Aseguradora</label>
+              <input type="text" required class="form-control" id="aseguradoraSoatMod" name="aseguradora">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="valorSoat" class="form-label">Valor</label>
+              <input type="number" required min="0" class="form-control" id="valorSoatMod" name="valor">
+            </div>
 
 
+
+
+
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./static/data/scripts/scriptSoat.js"></script>
 
 </body>
 

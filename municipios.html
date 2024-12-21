@@ -132,7 +132,12 @@
 
 
 
-          <form id="nuevoMunicipio" method="post" action="http://localhost:3000/submit">
+          <form id="nuevoMunicipio" method="post" action="/api/municipio">
+
+            <div class="form-group mb-3">
+              <label for="idDepartamento" class="form-label">ID Departamento</label>
+              <input type="number" required min="0" class="form-control" id="idDepartamento" name="idDepartamento">
+            </div>
 
             <div class="form-group mb-3">
               <label for="nombreMunicipio" class="form-label">Nombre Municipio</label>
@@ -158,8 +163,56 @@
     </div>
   </div>
 
+  <!-- Modal Editar-->
+
+  <div class="modal fade" id="modalEditarRegistro" tabindex="-1" aria-labelledby="modalNuevoRegistroLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalNuevoRegistroLabel">Nueva Persona</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form id="nuevoMunicipio" method="post" action="/api/municipio">
+
+            <div class="form-group mb-3">
+              <label for="idMod" class="form-label">ID</label>
+              <input type="number" required min="0" readonly class="form-control" id="idMod" name="id" style="background-color: gray;">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="idDepartamento" class="form-label">ID Departamento</label>
+              <input type="number" required min="0" class="form-control" id="idDepartamentoMod" name="id_departamento">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="nombreMunicipio" class="form-label">Nombre Municipio</label>
+              <input type="text" required class="form-control" id="nombreMunicipioMod" name="nombre_municipio">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="codigoMunicipio" class="form-label">Codigo Municipio</label>
+              <input type="text" required class="form-control" id="codigoMunicipioMod" name="codigo_municipio">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="areaMunicipio" class="form-label">Area Municipio</label>
+              <input type="number" required min="0" class="form-control" id="areaMunicipioMod" name="area">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </form>
 
 
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./static/data/scripts/scriptMunicipio.js"></script>
 
 </body>
 

@@ -1,5 +1,5 @@
 // URL del archivo JSON
-const jsonUrl = './data/json/personas.json';
+const jsonUrl = './data/json/vehiculo.json';
 
 // Selecciona el cuerpo de la tabla
 const tablaCuerpo = document.getElementById('tablaDatos');
@@ -18,16 +18,15 @@ fetch(jsonUrl)
             fila.id = `registro${item.id}`;
             fila.innerHTML = `
                 <td>${item.id}</td>
-                <td>${item.cedula}</td>
-                <td>${item.p_Nombre}</td>
-                <td>${item.s_Nombre}</td>
-                <td>${item.p_Apellido}</td>
-                <td>${item.s_Apellido}</td>
-                <td>${item.fecha_nacimiento}</td>
-                <td>${item.sexo}</td>
-                <td>${item.telefono}</td>
-                <td>${item.correo}</td>
-                <td>${item.estado_civil}</td>
+                <td>${item.id_dueno}</td>
+                <td>${item.expedido}</td>
+                <td>${item.nombre}</td>
+                <td>${item.marca}</td>
+                <td>${item.tipo}</td>
+                <td>${item.color}</td>
+                <td>${item.placa}</td>
+                <td>${item.anio_fabricacion}</td>
+                <td>${item.numero_serie}</td>
 
                 <button onclick="editarPersona(registro${item.id},${item.id})" type="button" class="btn btn-warning" id="editar${item.id}" data-bs-toggle="modal" data-bs-target="#modalEditarRegistro">Editar</button>
                 <button onclick="enviarIdBorrar(${item.id})" type="button" class="btn btn-danger" id="borrar${item.id}">Eliminar</button>
@@ -64,67 +63,27 @@ function enviarIdBorrar(item) {
 // Función para editar un registro
 function editarPersona(registro, id) {
 
-    cedula = registro.children[1].innerHTML;
-    p_Nombre = registro.children[2].innerHTML;
-    s_Nombre = registro.children[3].innerHTML;
-    p_Apellido = registro.children[4].innerHTML;
-    s_Apellido = registro.children[5].innerHTML;
-    fecha_nacimiento = registro.children[6].innerHTML;
-    sexo = registro.children[7].innerHTML;
-    telefono = registro.children[8].innerHTML;
-    correo = registro.children[9].innerHTML;
-    estado_civil = registro.children[10].innerHTML;
+    idDuenoMod = registro.children[1].innerHTML;
+    expedidoMod = registro.children[2].innerHTML;
+    nombreVehiculoMod = registro.children[3].innerHTML;
+    marcaVehiculoMod = registro.children[4].innerHTML;
+    tipoVehiculoMod = registro.children[5].innerHTML;
+    colorVehiculoMod = registro.children[6].innerHTML;
+    placaVehiculoMod = registro.children[7].innerHTML;
+    anioVehiculoMod = registro.children[8].innerHTML;
+    noSerievehiculoMod = registro.children[9].innerHTML;
 
-    fecha_nacimiento = new Date(fecha_nacimiento).toISOString().split('T')[0];
 
     idMod = document.getElementById('idMod').setAttribute('value', id);
-    cedulaMod = document.getElementById('cedulaMod').setAttribute('value', cedula);
-    p_NombreMod = document.getElementById('primerNombreMod').setAttribute('value', p_Nombre);
-    s_NombreMod = document.getElementById('segundoNombreMod').setAttribute('value', s_Nombre);
-    p_ApellidoMod = document.getElementById('primerApellidoMod').setAttribute('value', p_Apellido);
-    s_ApellidoMod = document.getElementById('segundoApellidoMod').setAttribute('value', s_Apellido);
-    fecha_nacimientoMod = document.getElementById('fechaDeNacimientoMod').setAttribute('value', fecha_nacimiento);
-    if (sexo == "Masculino") {
-        sexoMod = document.getElementById('sexoMod').selectedIndex = 1;
-
-    } else {
-        sexoMod = document.getElementById('sexoMod').selectedIndex = 0;
-    }
-    //sexoMod = document.getElementById('sexoMod').selectedIndex = 1;
-    telefonoMod = document.getElementById('telefonoMod').setAttribute('value', telefono);
-    correoMod = document.getElementById('direccionDeCorreoMod').setAttribute('value', correo);
-
-    switch (estado_civil) {
-        case "Soltero":
-
-            estado_civilMod = document.getElementById('estadoCivilMod').selectedIndex = 0;
-
-            break;
-        case "Casado":
-
-            estado_civilMod = document.getElementById('estadoCivilMod').selectedIndex = 1;
-
-            break;
-        case "Divorciado":
-
-            estado_civilMod = document.getElementById('estadoCivilMod').selectedIndex = 2;
-
-            break;
-        case "Viudo":
-
-            estado_civilMod = document.getElementById('estadoCivilMod').selectedIndex = 3;
-
-            break;
-        case "UnionLibre":
-
-            estado_civilMod = document.getElementById('estadoCivilMod').selectedIndex = 4;
-
-            break;
-
-        default:
-            break;
-    }
-    //estado_civilMod = document.getElementById('estadoCivilMod').setAttribute('value', estado_civil);
-
+    idDuenoMod = document.getElementById('idDuenoMod').setAttribute('value', idDuenoMod);
+    expedidoMod = document.getElementById('expedidoMod').setAttribute('value', expedidoMod);
+    nombreVehiculoMod = document.getElementById('nombreVehiculoMod').setAttribute('value', nombreVehiculoMod);
+    marcaVehiculoMod = document.getElementById('marcaVehiculoMod').setAttribute('value', marcaVehiculoMod);
+    tipoVehiculoMod = document.getElementById('tipoVehiculoMod').setAttribute('value', tipoVehiculoMod);
+    colorVehiculoMod = document.getElementById('colorVehiculoMod').setAttribute('value', colorVehiculoMod);
+    placaVehiculoMod = document.getElementById('placaVehiculoMod').setAttribute('value', placaVehiculoMod);
+    anioVehiculoMod = document.getElementById('anioVehiculoMod').setAttribute('value', anioVehiculoMod);
+    noSerievehiculoMod = document.getElementById('noSerievehiculoMod').setAttribute('value', noSerievehiculoMod);
+    
 
 }

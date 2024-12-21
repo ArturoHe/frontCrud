@@ -130,64 +130,16 @@
 
 
 
-          <form id="nuevoTrabajoPersona" method="post" action="http://localhost:3000/submit">
+          <form id="nuevoTrabajoPersona" method="post" action="/api/persona_trabajo">
 
             <div class="form-group mb-3">
-              <label for="cedula" class="form-label">Cedula</label>
-              <input type="number" required min="0" class="form-control" id="cedula" name="cedula">
+              <label for="idPersona" class="form-label">ID Persona</label>
+              <input type="number" required min="0" class="form-control" id="idPersona" name="idPersona">
             </div>
 
             <div class="form-group mb-3">
-              <label for="primerNombre" class="form-label">Primer Nombre</label>
-              <input type="text" required class="form-control" id="primerNombre" name="primerNombre">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="segundoNombre" class="form-label">Segundo Nombre</label>
-              <input type="text" class="form-control" id="segundoNombre" name="segundoNombre">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="primerApellido" class="form-label">Primer Apellido</label>
-              <input type="text" required class="form-control" id="primerApellido" name="primerApellido">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="segundoApellido" class="form-label">Segundo Apellido</label>
-              <input type="text" required class="form-control" id="segundoApellido" name="segundoApellido">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="fechaDeNacimiento" class="form-label">Fecha de Nacimiento</label>
-              <input type="date" required class="form-control" id="fechaDeNacimiento" name="fechaDeNacimiento">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="sexo" required class="form-label">Sexo</label>
-              <select class="form-group form-select" required id="sexo" name="sexo">
-                <option value="Soltero">Femenino</option>
-                <option value="Casado">Masculino</option>
-              </select>
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="telefono" class="form-label">Telefono</label>
-              <input type="number" required min="0" class="form-control" id="telefono" name="telefono">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="direccionDeCorreo" class="form-label">Correo Electronico</label>
-              <input type="email" required class="form-control" id="direccionDeCorreo" name="direccionDeCorreo">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="estadoCivil" class="form-label">Estado Civil</label>
-              <select class="form-group form-select" required id="estadoCivil" name="estadoCivil">
-                <option value="Soltero">Soltero</option>
-                <option value="Casado">Casado</option>
-                <option value="Divorciado">Divorciado</option>
-                <option value="Union Libre">Union Libre</option>
-              </select>
+              <label for="idTrabajo" class="form-label">ID Trabajo</label>
+              <input type="number" required min="0" class="form-control" id="idTrabajo" name="idTrabajo">
             </div>
 
             <button type="submit" class="btn btn-primary">Agregar</button>
@@ -199,7 +151,45 @@
     </div>
   </div>
 
+  <!-- Modal Editar-->
 
+  <div class="modal fade" id="modalEditarRegistro" tabindex="-1" aria-labelledby="modalNuevoRegistroLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalNuevoRegistroLabel">Nueva Persona</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form id="nuevoTrabajoPersona" method="post" action="/api/persona_trabajo">
+
+            <div class="form-group mb-3">
+              <label for="idMod" class="form-label">ID</label>
+              <input type="number" required min="0" readonly class="form-control" id="idMod" name="id" style="background-color: gray;">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="idPersona" class="form-label">ID Persona</label>
+              <input type="number" required min="0" class="form-control" id="idPersonaMod" name="id_persona">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="idTrabajo" class="form-label">ID Trabajo</label>
+              <input type="number" required min="0" class="form-control" id="idTrabajoMod" name="id_trabajo">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./static/data/scripts/scriptTrabajosPersona.js"></script>
 
 
 </body>

@@ -138,7 +138,7 @@
 
 
 
-          <form id="nuevaPersona" method="post" action="http://localhost:3000/submit">
+          <form id="nuevaPersona" method="post" action="/api/persona">
 
             <div class="form-group mb-3">
               <label for="cedula" class="form-label">Cedula</label>
@@ -222,7 +222,7 @@
 
 
 
-          <form id="personaEditar" method="post" action="http://localhost:3000/submit">
+          <form id="personaEditar" method="post" action="/api/persona">
 
             <div class="form-group mb-3">
               <label for="idMod" class="form-label">ID</label>
@@ -238,27 +238,27 @@
 
             <div class=" form-group mb-3">
               <label for="primerNombre" class="form-label">Primer Nombre</label>
-              <input type="text" required class="form-control" id="primerNombreMod" name="primerNombre">
+              <input type="text" required class="form-control" id="primerNombreMod" name="p_Nombre">
             </div>
 
             <div class="form-group mb-3">
               <label for="segundoNombre" class="form-label">Segundo Nombre</label>
-              <input type="text" class="form-control" id="segundoNombreMod" name="segundoNombre">
+              <input type="text" class="form-control" id="segundoNombreMod" name="s_Nombre">
             </div>
 
             <div class="form-group mb-3">
               <label for="primerApellido" class="form-label">Primer Apellido</label>
-              <input type="text" required class="form-control" id="primerApellidoMod" name="primerApellido">
+              <input type="text" required class="form-control" id="primerApellidoMod" name="p_Apellido">
             </div>
 
             <div class="form-group mb-3">
               <label for="segundoApellido" class="form-label">Segundo Apellido</label>
-              <input type="text" required class="form-control" id="segundoApellidoMod" name="segundoApellido">
+              <input type="text" required class="form-control" id="segundoApellidoMod" name="s_Apellido">
             </div>
 
             <div class="form-group mb-3">
               <label for="fechaDeNacimiento" class="form-label">Fecha de Nacimiento</label>
-              <input type="date" required class="form-control" id="fechaDeNacimientoMod" name="fechaDeNacimiento">
+              <input type="date" required class="form-control" id="fechaDeNacimientoMod" name="fecha_nacimiento">
             </div>
 
             <div class="form-group mb-3">
@@ -276,12 +276,12 @@
 
             <div class="form-group mb-3">
               <label for="direccionDeCorreo" class="form-label">Correo Electronico</label>
-              <input type="email" required class="form-control" id="direccionDeCorreoMod" name="direccionDeCorreo">
+              <input type="email" required class="form-control" id="direccionDeCorreoMod" name="correo">
             </div>
 
             <div class="form-group mb-3">
               <label for="estadoCivil" class="form-label">Estado Civil</label>
-              <select class="form-group form-select" required id="estadoCivilMod" name="estadoCivil">
+              <select class="form-group form-select" required id="estadoCivilMod" name="estado_civil">
                 <option value="Soltero">Soltero</option>
                 <option value="Casado">Casado</option>
                 <option value="Divorciado">Divorciado</option>
@@ -300,7 +300,7 @@
     </div>
   </div>
 
-  <script src="./data/scripts/scriptPersonas.js"></script>
+  <script src="./static/data/scripts/scriptPersonas.js"></script>
 
 </body>
 

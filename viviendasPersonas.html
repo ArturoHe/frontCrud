@@ -131,7 +131,7 @@
 
 
 
-          <form id="nuevaViviendaPersona" method="post" action="http://localhost:3000/submit">
+          <form id="nuevaViviendaPersona" method="post" action="/api/persona_vivienda">
 
             <div class="form-group mb-3">
               <label for="idPersona" class="form-label">ID Persona</label>
@@ -158,54 +158,54 @@
     </div>
   </div>
 
+<!-- ModalEditar-->
 
-  <!-- Modal Editar-->
+<div class="modal fade" id="modalEditarRegistro" tabindex="-1" aria-labelledby="modalNuevoRegistroLabel"
+aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="modalNuevoRegistroLabel">Nueva Persona</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
 
-  <div class="modal fade" id="modalNuevaViviendaPersonaEditar" tabindex="-1"
-    aria-labelledby="modalNuevaViviendaPersonaEditarLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="modalNuevaViviendaPersonaEditarLabel">Editar Vivienda - Persona</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+
+      <form id="nuevaViviendaPersona" method="post" action="/api/persona_vivienda">
+
+        <div class="form-group mb-3">
+          <label for="idMod" class="form-label">ID</label>
+          <input type="number" required readonly class="form-control" id="idMod" name="id"
+            style="background-color: gray;">
         </div>
-        <div class="modal-body">
 
-
-          <form id="nuevaViviendaPersona" method="post" action="http://localhost:3000/submit">
-
-
-            <div class="form-group mb-3">
-              <label for="id" class="form-label">ID</label>
-              <input type="number" required min="0" class="form-control" id="id" name="id">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="idPersona" class="form-label">ID Persona</label>
-              <input type="number" required min="0" class="form-control" id="idPersona" name="idPersona">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="idVivienda" class="form-label">ID Vivienda</label>
-              <input type="number" required min="0" class="form-control" id="idVivienda" name="idVivienda">
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="propietario" class="form-label">Propietario</label>
-              <input type="text" required class="form-control" id="propietario" name="propietario">
-            </div>
-
-
-            <button type="submit" class="btn btn-primary">Agregar</button>
-          </form>
-
-
+        <div class="form-group mb-3">
+          <label for="idPersona" class="form-label">ID Persona</label>
+          <input type="number" required min="0" class="form-control" id="idPersonaMod" name="id_persona">
         </div>
-      </div>
+
+        <div class="form-group mb-3">
+          <label for="idVivienda" class="form-label">ID Vivienda</label>
+          <input type="number" required min="0" class="form-control" id="idViviendaMod" name="id_vivienda">
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="propietario" class="form-label">Propietario</label>
+          <input type="text" required class="form-control" id="propietarioMod" name="propietario">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Agregar</button>
+      </form>
+
+
     </div>
   </div>
+</div>
+</div>
 
-
+  <script src="./static/data/scripts/scriptViviendaPersona.js"></script>
 
 </body>
 
